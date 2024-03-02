@@ -1,0 +1,22 @@
+Caso de uso 
+
+El programa se encargara de automatizar la tarea de creación de expedientes para situaciones de denuncias, 
+permitiendo a los usuarios registrarse inicialmente para poder asi validar qeu cuenta con los accesos necesarios para relaizar 
+determinar determinda tarea, luego podra iniiciar la creacion de espediente, el progrma mostrara una interfaz en la que 
+se incluira la opcion de crear un nuevo expediente o buscar uno existente, en el caso de crear un nuevo expediente, 
+dentro de esta opcion se debra especificar tres campos en primera instancia, denunciante denunciado y ofendido, para el tipo de delito  podran elegir las siguientes:
+*Denuncia Penal 
+*Denuncia constitucional
+*Denuncia civil 
+*Denuncia adminstrativa 
+
+En **denuncia penal** y **denuncia civil** se considera que  se refiere a la declaración sobre el conocimiento de un hecho que reviste los caracteres de un delito. Se dirige a la Fiscalía competente o a la Policía Nacional y marca el inicio de una causa penal.
+Puede ser realizada por cualquier persona, incluyendo la víctima, el perjudicado o un tercero. El denunciante debe ser mayor de edad y ejercer plenamente sus derechos.
+No es necesario establecer la calificación jurídica ni anexar pruebas para la admisión de la denuncia
+En **denuncia constitucional**  se interpone cuando los presuntos autores del delito ocupan los más altos cargos funcionales de la República. Esto está regulado en el artículo 99 de la Constitución Política.
+Es una denuncia escrita que se presenta ante las instancias correspondientes 
+
+la interfaz para procesar la denuncia se encuentran los siguientes campos: Se requiere el nombre del denunciante y los nombres de los implicados, asi como la direccion  donde se susito los hechos, para cada uno de los autores se requerira su nomrbre completo, direccion de domicilio, genero, sexo, estado civil y número de indetidad. 
+
+dentro de la interfas de la creacion de expediente se incluira la opcion de agrrar caso. 
+cuando el usuario presione crear se visualizara una ventana emergente donde especificara si el expediente cumple con los campos minimos requeridos y de no serlo lo mencionara, para que el usuario realice los cambios pertienentes y cumplir con el estandar para proceder con la creacion de expediente valido. 
