@@ -18,7 +18,6 @@ propiedades del objeto expediente :
 - quitar_denunciado()
 
 
-
 propiedades del objeto  persona:
 - Nombre  (str)
 - Apellido (str)
