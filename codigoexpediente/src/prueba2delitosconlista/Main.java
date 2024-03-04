@@ -1,16 +1,16 @@
 package prueba2delitosconlista;
 
-
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        
+       
         int numExpedientes = 2; 
 
-        
+       
         Demandado[] demandados = new Demandado[numExpedientes];
         Demandante[] demandantes = new Demandante[numExpedientes];
         Expediente[] expedientes = new Expediente[numExpedientes];
@@ -24,9 +24,10 @@ public class Main {
             demandantes[i] = crearDemandanteDesdeConsola(scanner);
 
             expedientes[i] = new Expediente(demandados[i], demandantes[i]);
+            agregarDelitosDesdeConsola(scanner, expedientes[i]);
         }
 
-      
+        
         for (int i = 0; i < numExpedientes; i++) {
             System.out.println("\nInformación del expediente " + (i + 1) + ":");
             mostrarInformacionExpediente(expedientes[i]);
@@ -35,7 +36,7 @@ public class Main {
         scanner.close();
     }
 
-  
+    
     private static Demandado crearDemandadoDesdeConsola(Scanner scanner) {
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
@@ -52,7 +53,7 @@ public class Main {
         return new Demandado(nombre, apellido, edad, direccion);
     }
 
-  
+   
     private static Demandante crearDemandanteDesdeConsola(Scanner scanner) {
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
@@ -69,7 +70,7 @@ public class Main {
         return new Demandante(nombre, apellido, edad, direccion);
     }
 
-    
+  
     private static Direccion crearDireccionDesdeConsola(Scanner scanner) {
         System.out.print("Departamento: ");
         String departamento = scanner.nextLine();
@@ -84,6 +85,22 @@ public class Main {
         String bloque = scanner.nextLine();
 
         return new Direccion(departamento, municipio, colonia, bloque);
+    }
+
+    
+    private static void agregarDelitosDesdeConsola(Scanner scanner, Expediente expediente) {
+        System.out.print("¿Cuántos delitos cometió el demandado? ");
+        int numDelitos = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 0; i < numDelitos; i++) {
+            System.out.println("Ingrese el nombre del delito:");
+            String nombreDelito = scanner.nextLine();
+
+            System.out.println("Ingrese la descripción del delito:");
+            String descripcionDelito = scanner.nextLine();
+
+            expediente.getDemandado().agregarDelito(new Delito(nombreDelito, descripcionDelito));
+        }
     }
 
     
@@ -102,6 +119,3 @@ public class Main {
         System.out.println("Dirección: " + ((Persona) expediente.getDemandante()).obtenerDireccion());
     }
 }
-
-
-  
