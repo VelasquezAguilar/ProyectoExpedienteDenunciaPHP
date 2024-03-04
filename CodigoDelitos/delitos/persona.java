@@ -19,7 +19,7 @@ abstract public class persona {
 		SegundoNombre = segundoNombre;
 		PrimerApellido = primerApellido;
 		SegundoApellido = segundoApellido;
-		Edad = edad;
+		this.Edad = edad;
 		 this.direccion = direccion;
 		
 	
