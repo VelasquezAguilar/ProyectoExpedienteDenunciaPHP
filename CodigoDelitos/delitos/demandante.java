@@ -1,20 +1,22 @@
 package delitos;
 
 public class demandante extends persona{
-
-	public demandante() {
+    //constructores
+    public demandante(){
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public demandante(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido,
-			char genero, int edad) {
-		super(primerNombre, segundoNombre, primerApellido, segundoApellido, genero, edad);
-		// TODO Auto-generated constructor stub
+			          char genero,         int edad,             String identidad,      direccion dirDemandante) {
+		
+			super();
+			
 	}
     
+
+
 	public void realizarAccion() {
-        System.out.println(getPrimerNombre() + getPrimerApellido() + " está demandando.");
+        System.out.println(getPrimerNombre() +" "+ getPrimerApellido() + " entidad que realizo la denuncia.");
     }
 	
 	

@@ -10,7 +10,7 @@ public class direccion {
 	private String Casa;
 	
 	public direccion(String departamento, String municipio, String aldeaCiudad, String colonia, String codigopostal,
-			String bloque, String casa) {
+			String bloque ) {
 		super();
 		Departamento = departamento;
 		Municipio = municipio;
@@ -18,13 +18,12 @@ public class direccion {
 		Colonia = colonia;
 		Codigopostal = codigopostal;
 		Bloque = bloque;
-		Casa = casa;
+		
 	}
 
 	public String getDepartamento() {
 		return Departamento;
 	}
-
 	public void setDepartamento(String departamento) {
 		Departamento = departamento;
 	}
@@ -32,7 +31,6 @@ public class direccion {
 	public String getMunicipio() {
 		return Municipio;
 	}
-
 	public void setMunicipio(String municipio) {
 		Municipio = municipio;
 	}
@@ -40,7 +38,6 @@ public class direccion {
 	public String getAldeaCiudad() {
 		return AldeaCiudad;
 	}
-
 	public void setAldeaCiudad(String aldeaCiudad) {
 		AldeaCiudad = aldeaCiudad;
 	}
@@ -48,7 +45,6 @@ public class direccion {
 	public String getColonia() {
 		return Colonia;
 	}
-
 	public void setColonia(String colonia) {
 		Colonia = colonia;
 	}
@@ -56,7 +52,6 @@ public class direccion {
 	public String getCodigopostal() {
 		return Codigopostal;
 	}
-
 	public void setCodigopostal(String codigopostal) {
 		Codigopostal = codigopostal;
 	}
@@ -64,7 +59,6 @@ public class direccion {
 	public String getBloque() {
 		return Bloque;
 	}
-
 	public void setBloque(String bloque) {
 		Bloque = bloque;
 	}
@@ -72,7 +66,6 @@ public class direccion {
 	public String getCasa() {
 		return Casa;
 	}
-
 	public void setCasa(String casa) {
 		Casa = casa;
 	}
