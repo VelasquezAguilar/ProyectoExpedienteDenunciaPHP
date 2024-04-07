@@ -24,7 +24,7 @@ class Demandado extends Persona {
         }
     }
 
-	public String Juan() {
+	public String jhoan() {
 		// TODO Auto-generated method stub
 		return null;
 	}

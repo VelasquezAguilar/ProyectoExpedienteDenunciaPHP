@@ -13,6 +13,7 @@ public class Main {
        
         Demandado[] demandados = new Demandado[numExpedientes];
         Demandante[] demandantes = new Demandante[numExpedientes];
+        Ofendido[] ofendidos = new Ofendido[numExpedientes];
         Expediente[] expedientes = new Expediente[numExpedientes];
 
         
@@ -22,6 +23,9 @@ public class Main {
 
             System.out.println("Ingrese la información del demandante " + (i + 1) + ":");
             demandantes[i] = crearDemandanteDesdeConsola(scanner);
+
+            System.out.println("Ingrese la información del ofendido " + (i + 1) + ":");
+            ofendidos[i] = crearOfendidoDesdeConsola(scanner);
 
             expedientes[i] = new Expediente(demandados[i], demandantes[i]);
             agregarDelitosDesdeConsola(scanner, expedientes[i]);
@@ -36,7 +40,8 @@ public class Main {
         scanner.close();
     }
 
-    
+
+
     private static Demandado crearDemandadoDesdeConsola(Scanner scanner) {
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
@@ -69,8 +74,23 @@ public class Main {
 
         return new Demandante(nombre, apellido, edad, direccion);
     }
+    private static Ofendido crearOfendidoDesdeConsola(Scanner scanner) {
+        System.out.print("Nombre: ");
+        String nombre = scanner.nextLine();
 
-  
+        System.out.print("Apellido: ");
+        String apellido = scanner.nextLine();
+
+        System.out.print("Edad: ");
+        int edad = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("Ingrese la dirección:");
+        Direccion direccion = crearDireccionDesdeConsola(scanner);
+
+        return new Ofendido(nombre, apellido, edad, direccion);
+    }
+
+
     private static Direccion crearDireccionDesdeConsola(Scanner scanner) {
         System.out.print("Departamento: ");
         String departamento = scanner.nextLine();
@@ -113,6 +133,12 @@ public class Main {
         expediente.getDemandado().mostrarDelitos();
 
         System.out.println("\nInformación del demandante:");
+        System.out.println("Nombre: " + ((Persona) expediente.getDemandante()).getNombre());
+        System.out.println("Apellido: " + ((Persona) expediente.getDemandante()).getApellido());
+        System.out.println("Edad: " + ((Persona) expediente.getDemandante()).getEdad());
+        System.out.println("Dirección: " + ((Persona) expediente.getDemandante()).obtenerDireccion());
+
+        System.out.println("\nInformación del ofendido:");
         System.out.println("Nombre: " + ((Persona) expediente.getDemandante()).getNombre());
         System.out.println("Apellido: " + ((Persona) expediente.getDemandante()).getApellido());
         System.out.println("Edad: " + ((Persona) expediente.getDemandante()).getEdad());
