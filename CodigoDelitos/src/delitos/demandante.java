@@ -1,22 +1,8 @@
-package delitos;
+package prueba2delitosconlista;
 
-public class demandante extends persona{
-
-	public demandante() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public demandante(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido,
-			char genero, int edad) {
-		super(primerNombre, segundoNombre, primerApellido, segundoApellido, genero, edad);
-		// TODO Auto-generated constructor stub
-	}
-    
-	public void realizarAccion() {
-        System.out.println(getPrimerNombre() + getPrimerApellido() + " está demandando.");
+class Demandante extends Persona {
+    // Constructor
+    public Demandante(String nombre, String apellido, int edad, Direccion direccion) {
+        super(nombre, apellido, edad, direccion);
     }
-	
-	
-
 }

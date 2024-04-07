@@ -1,20 +1,31 @@
-package delitos;
+package prueba2delitosconlista;
 
-public class demandado extends persona{
+import java.util.ArrayList;
 
-	public demandado() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+class Demandado extends Persona {
+    private ArrayList<Delito> delitos;
 
-	public demandado(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido,
-			char genero, int edad) {
-		super(primerNombre, segundoNombre, primerApellido, segundoApellido, genero, edad);
-		// TODO Auto-generated constructor stub
-	}
-    
-	public void realizarAccion() {
-        System.out.println(getPrimerNombre() + getPrimerApellido() + " está demandado.");
+    // Constructor
+    public Demandado(String nombre, String apellido, int edad, Direccion direccion) {
+        super(nombre, apellido, edad, direccion);
+        delitos = new ArrayList<>();
     }
 
+    // Método para agregar un delito a la lista de delitos
+    public void agregarDelito(Delito delito) {
+        delitos.add(delito);
+    }
+
+    // Método para mostrar los delitos cometidos por el demandado
+    public void mostrarDelitos() {
+        for (Delito delito : delitos) {
+            System.out.println("Delito cometido por el demandado: " + delito.getNombre());
+            System.out.println("Descripción: " + delito.getDescripcion());
+        }
+    }
+
+	public String Juan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

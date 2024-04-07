@@ -1,97 +1,26 @@
-package delitos;
+package prueba2delitosconlista;
 
-public class direccion {
-	private String Departamento;
-	private String Municipio;
-	private String AldeaCiudad;
-	private String Colonia;
-	private String Codigopostal;
-	private String Bloque;
-	private String Casa;
-	
-	public direccion(String departamento, String municipio, String aldeaCiudad, String colonia, String codigopostal,
-			String bloque, String casa) {
-		super();
-		Departamento = departamento;
-		Municipio = municipio;
-		AldeaCiudad = aldeaCiudad;
-		Colonia = colonia;
-		Codigopostal = codigopostal;
-		Bloque = bloque;
-		Casa = casa;
-	}
+import java.util.ArrayList;
 
-	public String getDepartamento() {
-		return Departamento;
-	}
+import java.util.ArrayList;
 
-	public void setDepartamento(String departamento) {
-		Departamento = departamento;
-	}
+//Clase Direccion
+class Direccion {
+ private String departamento;
+ private String municipio;
+ private String colonia;
+ private String bloque;
 
-	public String getMunicipio() {
-		return Municipio;
-	}
+ // Constructor
+ public Direccion(String departamento, String municipio, String colonia, String bloque) {
+     this.departamento = departamento;
+     this.municipio = municipio;
+     this.colonia = colonia;
+     this.bloque = bloque;
+ }
 
-	public void setMunicipio(String municipio) {
-		Municipio = municipio;
-	}
-
-	public String getAldeaCiudad() {
-		return AldeaCiudad;
-	}
-
-	public void setAldeaCiudad(String aldeaCiudad) {
-		AldeaCiudad = aldeaCiudad;
-	}
-
-	public String getColonia() {
-		return Colonia;
-	}
-
-	public void setColonia(String colonia) {
-		Colonia = colonia;
-	}
-
-	public String getCodigopostal() {
-		return Codigopostal;
-	}
-
-	public void setCodigopostal(String codigopostal) {
-		Codigopostal = codigopostal;
-	}
-
-	public String getBloque() {
-		return Bloque;
-	}
-
-	public void setBloque(String bloque) {
-		Bloque = bloque;
-	}
-
-	public String getCasa() {
-		return Casa;
-	}
-
-	public void setCasa(String casa) {
-		Casa = casa;
-	}
-
-	@Override
-	public String toString() {
-		return "direccion [Departamento=" + Departamento + ", Municipio=" + Municipio + ", AldeaCiudad=" + AldeaCiudad
-				+ ", Colonia=" + Colonia + ", Codigopostal=" + Codigopostal + ", Bloque=" + Bloque + ", Casa=" + Casa
-				+ "]";
-	}
-	
-	public void mostrardireccion() {
-	    System.out.println("Departamento: " + Departamento);
-	    System.out.println("Municipio: " + Municipio);
-	    System.out.println("AldeaCiudad: " + AldeaCiudad);
-	    System.out.println("Colonia: " + Colonia);
-	    System.out.println("Codigopostal: " + Codigopostal);
-	}
-	
-	
-
+ // Método para obtener la dirección como String
+ public String obtenerDireccion() {
+     return departamento + ", " + municipio + ", " + colonia + ", " + bloque;
+ }
 }
