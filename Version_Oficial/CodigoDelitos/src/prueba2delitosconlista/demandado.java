@@ -1,4 +1,4 @@
-package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista;
+package prueba2delitosconlista;
 
 import java.util.ArrayList;
 
@@ -6,8 +6,8 @@ class Demandado extends Persona {
     private ArrayList<Delito> delitos;
 
     // Constructor
-    public Demandado(String nombre, String apellido, int edad, Direccion direccion) {
-        super(nombre, apellido, edad, direccion);
+    public Demandado(String nombre, String apellido, int edad, String Id, Direccion direccion) {
+        super(nombre, apellido, edad, Id, direccion);
         delitos = new ArrayList<>();
     }
 
@@ -24,8 +24,8 @@ class Demandado extends Persona {
         }
     }
 
-	public String jhoan() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    public String jhoan() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }

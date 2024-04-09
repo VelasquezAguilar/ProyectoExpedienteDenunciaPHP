@@ -1,4 +1,4 @@
-package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista;
+package prueba2delitosconlista;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,16 +7,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-       
-        int numExpedientes = 2; 
 
-       
+        int numExpedientes = 2;
+
+
         Demandado[] demandados = new Demandado[numExpedientes];
         Demandante[] demandantes = new Demandante[numExpedientes];
         Ofendido[] ofendidos = new Ofendido[numExpedientes];
         Expediente[] expedientes = new Expediente[numExpedientes];
 
-        
+
         for (int i = 0; i < numExpedientes; i++) {
             System.out.println("Ingrese la información del demandado " + (i + 1) + ":");
             demandados[i] = crearDemandadoDesdeConsola(scanner);
@@ -27,11 +27,11 @@ public class Main {
             System.out.println("Ingrese la información del ofendido " + (i + 1) + ":");
             ofendidos[i] = crearOfendidoDesdeConsola(scanner);
 
-            expedientes[i] = new Expediente(demandados[i], demandantes[i]);
+            expedientes[i] = new Expediente(demandados[i], demandantes[i],ofendidos[i]);
             agregarDelitosDesdeConsola(scanner, expedientes[i]);
         }
 
-        
+
         for (int i = 0; i < numExpedientes; i++) {
             System.out.println("\nInformación del expediente " + (i + 1) + ":");
             mostrarInformacionExpediente(expedientes[i]);
@@ -52,13 +52,17 @@ public class Main {
         System.out.print("Edad: ");
         int edad = Integer.parseInt(scanner.nextLine());
 
+        System.out.println("Ingrese la ID:");
+        String Id = scanner.nextLine();
+
         System.out.println("Ingrese la dirección:");
         Direccion direccion = crearDireccionDesdeConsola(scanner);
 
-        return new Demandado(nombre, apellido, edad, direccion);
+
+        return new Demandado(nombre, apellido, edad, Id, direccion);
     }
 
-   
+
     private static Demandante crearDemandanteDesdeConsola(Scanner scanner) {
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
@@ -69,10 +73,13 @@ public class Main {
         System.out.print("Edad: ");
         int edad = Integer.parseInt(scanner.nextLine());
 
+        System.out.println("Ingrese la ID:");
+        String Id = scanner.nextLine();
+
         System.out.println("Ingrese la dirección:");
         Direccion direccion = crearDireccionDesdeConsola(scanner);
 
-        return new Demandante(nombre, apellido, edad, direccion);
+        return new Demandante(nombre, apellido, edad, Id, direccion);
     }
     private static Ofendido crearOfendidoDesdeConsola(Scanner scanner) {
         System.out.print("Nombre: ");
@@ -84,10 +91,13 @@ public class Main {
         System.out.print("Edad: ");
         int edad = Integer.parseInt(scanner.nextLine());
 
+        System.out.println("Ingrese la ID:");
+        String Id = scanner.nextLine();
+
         System.out.println("Ingrese la dirección:");
         Direccion direccion = crearDireccionDesdeConsola(scanner);
 
-        return new Ofendido(nombre, apellido, edad, direccion);
+        return new Ofendido(nombre, apellido, edad, Id, direccion);
     }
 
 
@@ -104,10 +114,13 @@ public class Main {
         System.out.print("Bloque: ");
         String bloque = scanner.nextLine();
 
-        return new Direccion(departamento, municipio, colonia, bloque);
+        System.out.print("casa: ");
+        String casa = scanner.nextLine();
+
+        return new Direccion(departamento, municipio, colonia, bloque,casa);
     }
 
-    
+
     private static void agregarDelitosDesdeConsola(Scanner scanner, Expediente expediente) {
         System.out.print("¿Cuántos delitos cometió el demandado? ");
         int numDelitos = Integer.parseInt(scanner.nextLine());
@@ -123,12 +136,13 @@ public class Main {
         }
     }
 
-    
+
     private static void mostrarInformacionExpediente(Expediente expediente) {
         System.out.println("Información del demandado:");
         System.out.println("Nombre: " + expediente.getDemandado().getNombre());
         System.out.println("Apellido: " + expediente.getDemandado().getApellido());
         System.out.println("Edad: " + expediente.getDemandado().getEdad());
+        System.out.println("ID: " + expediente.getDemandado().getId());
         System.out.println("Dirección: " + expediente.getDemandado().obtenerDireccion());
         expediente.getDemandado().mostrarDelitos();
 
@@ -136,12 +150,15 @@ public class Main {
         System.out.println("Nombre: " + ((Persona) expediente.getDemandante()).getNombre());
         System.out.println("Apellido: " + ((Persona) expediente.getDemandante()).getApellido());
         System.out.println("Edad: " + ((Persona) expediente.getDemandante()).getEdad());
+        System.out.println("ID: " + ((Persona) expediente.getDemandante()).getId());
         System.out.println("Dirección: " + ((Persona) expediente.getDemandante()).obtenerDireccion());
 
         System.out.println("\nInformación del ofendido:");
-        System.out.println("Nombre: " + ((Persona) expediente.getDemandante()).getNombre());
-        System.out.println("Apellido: " + ((Persona) expediente.getDemandante()).getApellido());
-        System.out.println("Edad: " + ((Persona) expediente.getDemandante()).getEdad());
-        System.out.println("Dirección: " + ((Persona) expediente.getDemandante()).obtenerDireccion());
+        System.out.println("Nombre: " + ((Persona) expediente.getOfendido()).getNombre());
+        System.out.println("Apellido: " + ((Persona) expediente.getOfendido()).getApellido());
+        System.out.println("Edad: " + ((Persona) expediente.getOfendido()).getEdad());
+        System.out.println("ID: " + ((Persona) expediente.getOfendido()).getId());
+        System.out.println("Dirección: " + ((Persona) expediente.getOfendido()).obtenerDireccion());
     }
+
 }
