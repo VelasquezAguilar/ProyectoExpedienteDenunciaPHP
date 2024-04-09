@@ -1,4 +1,4 @@
-package delitos;
+package Version_Pruebas.CodigoFormatoDenuncia.delitos;
 
 import java.util.Scanner;
 

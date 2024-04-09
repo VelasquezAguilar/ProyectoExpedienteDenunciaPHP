@@ -1,4 +1,6 @@
-package delitos;
+package Version_Pruebas.CodigoFormatoDenuncia.delitos;
+
+import Version_Pruebas.ConexionPostgreSQL.persona;
 
 public class testigo extends persona{
     //Constructores 

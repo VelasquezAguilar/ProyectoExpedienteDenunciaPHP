@@ -1,4 +1,4 @@
-package delitos;
+package Version_Pruebas.CodigoFormatoDenuncia.delitos;
 
 public class direccion {
 	private String Departamento;
