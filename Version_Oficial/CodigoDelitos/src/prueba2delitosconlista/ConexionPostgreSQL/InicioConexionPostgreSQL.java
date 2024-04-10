@@ -22,13 +22,13 @@ public class InicioConexionPostgreSQL {
         String user = paqueteDeRecursos.getString("user");
         String password = paqueteDeRecursos.getString("password");
 
-        conexion = coneccion(host, port, database, user, password);
+        conexion = conexion(host, port, database, user, password);
 
         return conexion;
     }
 
 
-    private Connection coneccion(String host, String port, String database, String user, String password){
+    private Connection conexion(String host, String port, String database, String user, String password){
         String url="";
         try{
             //registrar el driver de PostgreSQL 
