@@ -13,7 +13,7 @@ class Direccion {
  private String casa;
 
  // Constructor
- public Direccion(String departamento, String municipio, String colonia, String bloque) {
+ public Direccion(String departamento, String municipio, String colonia, String bloque, String casa) {
      this.departamento = departamento;
      this.municipio = municipio;
      this.colonia = colonia;

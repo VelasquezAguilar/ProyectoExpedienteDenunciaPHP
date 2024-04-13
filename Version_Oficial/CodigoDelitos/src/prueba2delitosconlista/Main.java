@@ -1,4 +1,4 @@
-package prueba2delitosconlista;
+package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista ;
 
 import java.util.ArrayList;
 import java.util.Scanner;

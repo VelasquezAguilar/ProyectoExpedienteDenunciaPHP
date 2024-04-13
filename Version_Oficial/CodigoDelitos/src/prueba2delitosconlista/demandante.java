@@ -1,6 +1,6 @@
 package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista;
 
-import prueba2delitosconlista.Direccion;
+import Version_Oficial.CodigoDelitos.src.prueba2delitosconlista.Direccion;
 
 class Demandante extends Persona {
     // Constructor
