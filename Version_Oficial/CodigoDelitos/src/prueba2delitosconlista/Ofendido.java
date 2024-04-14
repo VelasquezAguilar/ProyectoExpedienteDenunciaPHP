@@ -6,3 +6,7 @@ class Ofendido extends Persona {
         super(nombre, apellido, edad,Id, direccion);
     }
 }
+
+
+
+ 

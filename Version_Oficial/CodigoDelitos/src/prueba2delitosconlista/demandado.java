@@ -23,7 +23,7 @@ class Demandado extends Persona {
             System.out.println("Descripción: " + delito.getDescripcion());
         }
     }
-
+     //esto que hace ¡¿?!
     public String jhoan() {
         // TODO Auto-generated method stub
         return null;
