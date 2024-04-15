@@ -1,4 +1,4 @@
-package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista;
+package Version_Oficial.CodigoDelitos.src.Classes_Conexion;
 
 @SuppressWarnings("hiding")
 class Exxpediente<Demandante, Demandado, Ofendido, Direccion> {

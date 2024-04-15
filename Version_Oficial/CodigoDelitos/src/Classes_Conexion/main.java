@@ -1,13 +1,15 @@
-package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista ;
+package Version_Oficial.CodigoDelitos.src.Classes_Conexion ;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+
+public class main {
     //********************************************************************************************************************************************** */
     //********************************************************************************************************************************************** */
     //********************************************************************************************************************************************** */
-    public static void main(String[] args) {
+    
+    public static void mainexecutable(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
        //Crearemos una condicion para que el {Actor} ingrese el dijito 1 para crear un nueevo expediente 

@@ -1,4 +1,4 @@
-package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista;
+package Version_Oficial.CodigoDelitos.src.Classes_Conexion;
 
 public class expediente {
     private Demandante demandante;

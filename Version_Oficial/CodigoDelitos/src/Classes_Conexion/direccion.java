@@ -1,6 +1,6 @@
-package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista;
+package Version_Oficial.CodigoDelitos.src.Classes_Conexion;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 
 //Clase Direccion
@@ -12,6 +12,7 @@ class Direccion  {
  private String casa;
  private String calle;
  public Delito objDelito;
+ public String descripcion;
 
  public String[]  OpcDeptos = {
             "Atlántida",
@@ -58,9 +59,13 @@ class Direccion  {
 
     // Método para obtener la dirección como String
     public String obtenerDireccion() {
-        return departamento + ", " + municipio + ", " + colonia + ", " + bloque +" , "+ casa;
+        return this.departamento + ", " + this.municipio + ", " + this. colonia + ", " + this.bloque +" , "+ this.casa;
     }
 
+    // Metodo para obtenr direccion de donde ocuurrio el delito 
+    public String obtenerDireccionDelito() {
+        return this.departamento + ", " + this.municipio + ", " + this. colonia + ", " + this.bloque +" , "+ this.calle + ", " + this.descripcion;
+    }
     
 }
 

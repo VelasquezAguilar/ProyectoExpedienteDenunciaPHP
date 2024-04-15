@@ -1,4 +1,4 @@
-package Version_Oficial.CodigoDelitos.src.prueba2delitosconlista.ConexionPostgreSQL;
+package Version_Oficial.CodigoDelitos.src.Classes_Conexion.ConexionPostgreSQL;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
