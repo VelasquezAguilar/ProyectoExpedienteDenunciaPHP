@@ -1,4 +1,4 @@
-package Version_Oficial.CodigoDelitos.src.Classes_Conexion.ConexionPostgreSQL;
+package com;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +13,7 @@ public class InicioConexionPostgreSQL {
     // se puede
     // utilizar en el programa para acceder a las propiedades contenidas en ese
     // archivo
-    final ResourceBundle paqueteDeRecursos = PropertyResourceBundle.getBundle("PostgreSQL");
+    final ResourceBundle paqueteDeRecursos = PropertyResourceBundle.getBundle("CredencialesPostgreSQL");
 
     // El tipo de dato Connection, viene importado de la libreria
     // java.sql.Connection

@@ -2,19 +2,18 @@ package Version_Oficial.CodigoDelitos.src.Classes_Conexion;
 
 //import java.util.ArrayList;
 
-
 //Clase Direccion
-class Direccion  {
- private String departamento;
- private String municipio;
- private String colonia;
- private String bloque;
- private String casa;
- private String calle;
- public Delito objDelito;
- public String descripcion;
+public class Direccion {
+    private String departamento;
+    private String municipio;
+    private String colonia;
+    private String bloque;
+    private String casa;
+    private String calle;
+    public Delito objDelito;
+    public String descripcion;
 
- public String[]  OpcDeptos = {
+    public String[] OpcDeptos = {
             "Atlántida",
             "Choluteca",
             "Colón",
@@ -33,39 +32,40 @@ class Direccion  {
             "Santa Bárbara",
             "Valle",
             "Yoro"
- };
+    };
 
+    // Constructor
 
- // Constructor
+    public Direccion(String departamento, String municipio, String colonia, String bloque, String casa) {
+        this.departamento = departamento;
+        this.municipio = municipio;
+        this.colonia = colonia;
+        this.bloque = bloque;
+        this.casa = casa;
 
- public Direccion(String departamento, String municipio, String colonia, String bloque, String casa) {
-     this.departamento = departamento;
-     this.municipio = municipio;
-     this.colonia = colonia;
-     this.bloque = bloque;
-     this.casa = casa;
-    
- }
+    }
 
- public Direccion(String departamento, String municipio, String colonia, String bloque, String calle, String descripcion) {
-    this.departamento = departamento;
-    this.municipio = municipio;
-    this.colonia = colonia;
-    this.bloque = bloque;
-    this.calle = calle;
-    this.objDelito = new Delito(descripcion);
-   
-}
+    // se implmenta conceptos de composicion para el objeto {delito}
+    public Direccion(String departamento, String municipio, String colonia, String bloque, String calle,
+            String descripcion) {
+        this.departamento = departamento;
+        this.municipio = municipio;
+        this.colonia = colonia;
+        this.bloque = bloque;
+        this.calle = calle;
+        this.objDelito = new Delito(descripcion);
+
+    }
 
     // Método para obtener la dirección como String
     public String obtenerDireccion() {
-        return this.departamento + ", " + this.municipio + ", " + this. colonia + ", " + this.bloque +" , "+ this.casa;
+        return this.departamento + ", " + this.municipio + ", " + this.colonia + ", " + this.bloque + " , " + this.casa;
     }
 
-    // Metodo para obtenr direccion de donde ocuurrio el delito 
+    // Metodo para obtenr direccion de donde ocuurrio el delito
     public String obtenerDireccionDelito() {
-        return this.departamento + ", " + this.municipio + ", " + this. colonia + ", " + this.bloque +" , "+ this.calle + ", " + this.descripcion;
+        return this.departamento + ", " + this.municipio + ", " + this.colonia + ", " + this.bloque + " , " + this.calle
+                + ", " + this.descripcion;
     }
-    
-}
 
+}

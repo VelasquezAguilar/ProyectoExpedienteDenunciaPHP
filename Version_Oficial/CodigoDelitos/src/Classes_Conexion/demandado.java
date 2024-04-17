@@ -2,7 +2,7 @@ package Version_Oficial.CodigoDelitos.src.Classes_Conexion;
 
 import java.util.ArrayList;
 
-class Demandado extends Persona {
+public class Demandado extends Persona {
     private ArrayList<Delito> delitos;
 
     // Constructor
@@ -23,9 +23,6 @@ class Demandado extends Persona {
             System.out.println("Descripción: " + delito.getDescripcion());
         }
     }
-     //esto que hace ¡¿?!
-    public String jhoan() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    // esto que hace ¡¿?!
+
 }

@@ -1,5 +1,5 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true,
+    "java.debug.settings.onBuildFailureProceed": false,
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "c:\\Program Files (x86)\\javafx-sdk-22\\lib\\javafx.base.jar",
@@ -10,5 +10,17 @@
         "c:\\Program Files (x86)\\javafx-sdk-22\\lib\\javafx.swing.jar",
         "c:\\Program Files (x86)\\javafx-sdk-22\\lib\\javafx.web.jar",
         "c:\\Program Files (x86)\\javafx-sdk-22\\lib\\javafx-swt.jar"
+    ],
+    "java.completion.favoriteStaticMembers": [
+        
+        "org.junit.Assert.*",
+        "org.junit.Assume.*",
+        "org.junit.jupiter.api.Assertions.*",
+        "org.junit.jupiter.api.Assumptions.*",
+        "org.junit.jupiter.api.DynamicContainer.*",
+        "org.junit.jupiter.api.DynamicTest.*",
+        "org.mockito.Mockito.*",
+        "org.mockito.ArgumentMatchers.*",
+        "org.mockito.Answers.*"
     ]
 }

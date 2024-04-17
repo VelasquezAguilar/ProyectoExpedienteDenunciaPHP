@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Example",
+            "request": "launch",
+            "mainClass": "com.example.postgresql.Example",
+            "projectName": "java-Conectar-Insertar-Consultar-postgreSQL"
+        },
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "ProyectoExpedienteDenuncia_13e50fb4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Version_Oficial.CodigoDelitos.src.Classes_Conexion.Main",
+            "projectName": "ProyectoExpedienteDenuncia_13e50fb4"
+        },
+        {
+            "type": "java",
+            "name": "Controlador",
+            "request": "launch",
+            "mainClass": "Version_Oficial.CodigoDelitos.src.Classes_Conexion.Controlador",
+            "projectName": "ProyectoExpedienteDenuncia"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Version_Oficial.CodigoDelitos.src.Classes_Conexion.Main",
+            "projectName": "ProyectoExpedienteDenuncia"
+        },
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "Launch Current File",
+            "mainClass": "${fileBasename}"
+        }
+    ]
+
+ 
+}

@@ -1,9 +1,8 @@
-package Version_Oficial.CodigoDelitos.src.Classes_Conexion.ConexionPostgreSQL;
+package com;
 
 import java.sql.*;
 
-import Version_Oficial.CodigoDelitos.src.Classes_Conexion.Demandante;
-import Version_Pruebas.CodigoFormatoDenuncia.delitos.connectar;
+import com.example.postgresql.Demandante;
 
 public class QueryBBDD {
 
@@ -36,7 +35,7 @@ public class QueryBBDD {
         String query = "SELECT * From developer.demandante ";
 
         try (Connection conexion = conectarPostgreSQL.conectarBaseDatos();
-                PreparedStatement pst = conectarPostgreSQL.prepareStatement(query);
+                PreparedStatement pst = conexion.prepareStatement(query);
                 ResultSet resultSet = pst.executeQuery()) {
 
             while (resultSet.next()) {
@@ -53,6 +52,13 @@ public class QueryBBDD {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
+    }
+
+    public void update() {
+
+    }
+
+    public void delete() {
     }
 
 }

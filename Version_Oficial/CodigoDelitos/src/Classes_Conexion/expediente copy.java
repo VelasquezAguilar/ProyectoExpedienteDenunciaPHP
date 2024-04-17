@@ -1,11 +1,13 @@
 package Version_Oficial.CodigoDelitos.src.Classes_Conexion;
 
 @SuppressWarnings("hiding")
-class Exxpediente<Demandante, Demandado, Ofendido, Direccion> {
+/// **********EL tipo de dato de direccion buscar formas de instanciarlo dentro
+/// de expadiente para que se aplique el concepto de composicion */
+public class Exxpediente<Demandante, Demandado, Ofendido, Direccion> {
     private Demandado demandado;
     private Demandante demandante;
     private Ofendido ofendido;
-    private Direccion  direccion;
+    private Direccion direccion;
 
     // Constructor
     public Exxpediente(Demandado demandado, Demandante demandante, Ofendido ofendido, Direccion direccion) {
@@ -24,11 +26,11 @@ class Exxpediente<Demandante, Demandado, Ofendido, Direccion> {
         return demandante;
     }
 
-    public Ofendido getOfendido(){
+    public Ofendido getOfendido() {
         return this.ofendido;
     }
 
-    public Direccion getDescripcion(){
+    public Direccion getDescripcion() {
         return this.direccion;
     }
 }
