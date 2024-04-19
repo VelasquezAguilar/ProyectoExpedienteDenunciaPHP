@@ -520,10 +520,10 @@ nav.collapsed .topbar {
 .contenedorObjetos.active {
   width: 194.50px;
   height: 35px;
-  background: rgba(169.31, 169.29, 170, 0.85);
+  background: rgba(219, 118, 72, 0.85);
   border-radius: 25px;
   border: 2px black solid;
-  
+  color:  black;
 }
 
 .contenedorObjetos {
@@ -800,7 +800,7 @@ nav.collapsed .topbar {
   right: 45.5px;
   bottom: 541px;
 }
-=======
+
 body {
     margin: 0%;
     padding: 0%;
@@ -979,4 +979,3 @@ form .contraseña{
 }
 
 
->>>>>>> ec170c0df0d103db5fd049528f6046cf2cdd32ad

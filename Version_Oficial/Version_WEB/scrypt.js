@@ -47,7 +47,7 @@ searchInput.addEventListener("focus", (e) => {
   const linkContainer = document.querySelector(".tooltip.nuevoexpediente");
   var ventanaDenuncias = document.querySelector(".VentanaDenuncias");
   var contador =0;
-  console.log("Inserta el HTML dentro del contenedor VentanaDenunciantes3");
+  
 
   linkContainer.addEventListener("click", function() {
     
@@ -57,7 +57,7 @@ searchInput.addEventListener("focus", (e) => {
 
     /*ventanaDenuncias.classList.add("active");*/
 
-    const htmlToInsert = `
+   /* const htmlToInsert = `
     
       <div class="navSuperiorObjetos">
   
@@ -167,8 +167,8 @@ searchInput.addEventListener("focus", (e) => {
     `;
 
     // Inserta el HTML dentro del contenedor VentanaDenuncias
-    ventanaDenuncias.innerHTML = htmlToInsert;
-    console.console.log("Inserta el HTML dentro del contenedor VentanaDenunciantes");
+    ventanaDenuncias.innerHTML = htmlToInsert;*/
+    
   } else {
     ventanaDenuncias.classList.remove('active');
     contador = 0;
@@ -176,5 +176,34 @@ searchInput.addEventListener("focus", (e) => {
 
 
   });
+
+
+  var botonIniciar = document.querySelector(".nexhtml");
+  botonIniciar.addEventListener("click", function() {
+    
+    if (botonIniciar) {
+        botonIniciar.addEventListener("click", function() {
+            
+            window.location.href = "desplega.htm"; // Cambiar la ubicación a otro.html
+        });
+    }
+});
+
+
+//funcion que permita seleccionar objetos para cambiar disposciones de entradas de datos por medio de la ventana emergente
+
+const  seleccionarobj = document.querySelector(".contenedorObjetos");
+
+seleccionarobj.addEventListener("click", function() {
+
+  seleccionarobj.classList.add('active');
+  /*if(seleccionarobj.classList.contains("activo")){
+    seleccionarobj.classList.remove("activo");
+  }else{
+    seleccionarobj.classList.add("activo");
+  }
+*/
+
+});
 
 
