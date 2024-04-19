@@ -48,7 +48,7 @@ public class daProjects {
                 System.out.print(" | ");
                 System.out.println("created_at: " + rs.getString(3));
                 System.out.print(" | ");
-                System.out.print("project_id: " + rs.getString(4));
+                System.out.print("project_edad " + rs.getString(4));
                 System.out.print(" | ");
             }
 
