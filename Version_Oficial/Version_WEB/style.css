@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 :root {
   --primary-color: #191919;
   --white: #ffffff;
@@ -469,7 +469,10 @@ nav.collapsed .topbar {
 
 /*estilo de la venta para crear denuncias */
 
-.VentanaDenuncias {
+.VentanaDenuncias{
+  display: none;
+}
+.VentanaDenuncias.active {
   width: 2000px;
   height: 55px;
   left: 0px;
