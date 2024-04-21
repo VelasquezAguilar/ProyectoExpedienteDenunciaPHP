@@ -258,32 +258,51 @@
   <!----------------------------------------------Esta parte luego la renderizaremos con javaScript---------------------------------------------------------------------------------------------------------->
   <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<!---
-  <!--Trabajaremos la parte de la ventana o recuadro para crear las denuncias-->
   
+  <!--Trabajaremos la parte de la ventana o recuadro para crear las denuncias-->
+
+  
+  <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------Esta parte original del la ventana emergente ---------------------------------------------------------------------------------------------------------->
+  <!-------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
   <div class="VentanaDenuncias">
     <div class="navSuperiorObjetos">
-  
-      <div class="contenedorObjetos">
+
+      <div class="contenedorObjetos denunciante active">
         Denuncainte
       </div>
 
-      <div class="contenedorObjetos">
+      <div class="contenedorObjetos denunciado">
         Denunciado
       </div>
-      <div class="contenedorObjetos">
+      <div class="contenedorObjetos ofendido">
         Ofendido
       </div>
-      <div class="contenedorObjetos">
+      <div class="contenedorObjetos descripcion">
         Descripcion
       </div>
     </div>
 
 
-    <div class="texOrientativo">
+    <div class="texOrientativo denunciante desactivo">
 
       Ingrese los datos de la persona quien realiza la denuncia
     </div>
+    <div class="texOrientativo denunciado desactivo">
+
+      Ingrese los datos de la persona acusada en la denuncia
+    </div>
+    <div class="texOrientativo ofendido desactivo">
+
+      Ingrese los datos de la persona afectada/dañificada
+    </div>
+    <div class="texOrientativo descripcion desactivo">
+
+      Ingrese una descripcion detallada de los uscedido durante el incidente
+    </div>
+
 
     <div class="Id">
 
@@ -351,22 +370,123 @@
       SIGUIENTE
     </div>
 
-    <div class="eventosbotones Guardar activo">
+    <div class="eventosbotones Nuevo inactivo ">
+      NUEVO
+      <svg width="20" height="20" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="25" x2="40" y2="25" stroke="white" stroke-width="2" />
+        <line x1="25" y1="10" x2="25" y2="40" stroke="white" stroke-width="2" />
+      </svg>
+    </div>
+
+    <div class="eventosbotones Guardar activoboton ">
+      GUARDAR
+    </div>
+
+    <div class="eventosbotones Crear desactivo">
+      CREAR
+    </div>
+
+
+    <!--este boton solo aparecera cuando se preccione guardar-->
+
+  </div>
+
+  <div class="VentanaDenunciasdescripcion desactive ">
+    <div class="navSuperiorObjetos">
+
+      <div class="contenedorObjetos denunciante ">
+        Denuncainte
+      </div>
+
+      <div class="contenedorObjetos denunciado">
+        Denunciado
+      </div>
+      <div class="contenedorObjetos ofendido">
+        Ofendido
+      </div>
+      <div class="contenedorObjetos descripcion active">
+        Descripcion
+      </div>
+    </div>
+
+
+    <div class="texOrientativo denunciante desactivo">
+
+      Ingrese los datos de la persona quien realiza la denuncia
+    </div>
+    <div class="texOrientativo denunciado desactivo">
+
+      Ingrese los datos de la persona acusada en la denuncia
+    </div>
+    <div class="texOrientativo ofendido desactivo">
+
+      Ingrese los datos de la persona afectada/dañificada
+    </div>
+    <div class="texOrientativo descripcion desactivo">
+
+      Ingrese una descripcion detallada de los uscedido durante el incidente
+    </div>
+
+
+
+
+
+
+    <div class="NombreCompleto">
+      Direccion del incidente:
+    </div>
+
+
+
+
+
+    <div class="contenedorDescripcioDirecciones">
+      <div class="moldemidel Departamento2">
+        <input type="text" placeholder="Seleccione depto." class="full-width-input2">
+        <div class="triangle-right"></div>
+      </div>
+      <div class="moldemidel Municipio2">
+        <input type="text" placeholder="seleccione mun." class="full-width-input2">
+        <div class="triangle-right"></div>
+      </div>
+      <div class="moldeshort   Codigo2">
+        <input type="text" placeholder="Ingresar codigopostal" class="full-width-input">
+      </div>
+
+      <div class="moldemidel Aldea2">
+        <input type="text" placeholder="ingrese Aldea/Colonia" class="full-width-input2">
+      </div>
+      <div class="moldemidel Bloque2">
+        <input type="text" placeholder="ingrese numero bloque" class="full-width-input2">
+      </div>
+    </div>
+
+
+
+    <div class="Direccion">
+      Descripcion:
+    </div>
+
+    <div class="contenderTextoDescripcion">
+
+    </div>
+
+
+
+    <div class="eventosbotones Crear">
+      CREAR
+    </div>
+
+
+
+    <div class="eventosbotones Guardar activoboton ">
       GUARDAR
     </div>
 
 
     <!--este boton solo aparecera cuando se preccione guardar-->
-    <div class="eventosbotones Nuevo ">
-      NUEVO
-      <svg width="20" height="20" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-        <line x1="10" y1="25" x2="40" y2="25" stroke="white" stroke-width="2"/>
-        <line x1="25" y1="10" x2="25" y2="40" stroke="white" stroke-width="2"/>
-      </svg>
-    </div>
+
   </div>
-
-
 
 
 

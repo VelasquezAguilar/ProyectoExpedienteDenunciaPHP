@@ -466,6 +466,9 @@ nav.collapsed .topbar {
   }
 }
 
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
 
 /*estilo de la venta para crear denuncias */
 
@@ -497,6 +500,42 @@ nav.collapsed .topbar {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
+
+.VentanaDenunciasdescripcion.desactive{
+  display: none;
+}
+
+
+.VentanaDenunciasdescripcion.active {
+  width: 2000px;
+  height: 55px;
+  left: 0px;
+  margin-left: 60px;
+  top: 0px;
+  position: absolute;
+  background: #F5F5F5   ;
+  z-index: 3000;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 15px;
+  /*background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  */display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+
 
 .navSuperiorObjetos {
   position: absolute;
@@ -552,6 +591,24 @@ nav.collapsed .topbar {
     word-wrap: break-word;
     z-index: 3001;
 }
+
+/*para que no se muestren estos mensajes al principio*/
+.denunciante.desactivo {
+  display: none;
+}
+.denunciado.desactivo {
+  display: none;
+}
+.ofendido.desactivo {
+  display: none;
+}
+.descripcion.desactivo{
+  display: none;
+}
+
+
+
+
 
 .Id {
   position: absolute;
@@ -695,12 +752,34 @@ nav.collapsed .topbar {
 }
 
 .moldemidel {
-  width: 232px; 
-  height: 32px; 
-  background: white; 
-  border-radius: 25px; 
+  width: 232px;
+  height: 32px;
+  background: white;
+  border-radius: 15px;
   border: 2.50px rgba(0, 0, 0, 0) solid;
+  display: inline;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+
+.modelmidel.desactivo {
+  display:none;
+}
+
+.Crear.desactivo {
+  display: none;
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+
 
 .Departamento {
   display: flex;
@@ -759,6 +838,24 @@ nav.collapsed .topbar {
 .eventosbotones {
   width: 126px;
   height: 29px;
+  background: #476b39;
+  border-radius: 25px;
+  border: 2.50px rgba(0, 0, 0, 0) solid;
+  color: white;
+  font-size: 21px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  padding-left: 6.5px;
+}
+
+.eventosbotones.active {
+  width: 126px;
+  height: 29px;
   background: #6CE143;
   border-radius: 25px;
   border: 2.50px rgba(0, 0, 0, 0) solid;
@@ -781,19 +878,34 @@ nav.collapsed .topbar {
   right: 45.5px;
   bottom: 541px;
 }
-.Guardar {
+  
+.Crear {
+  position: absolute;
+  top: 464px;
+  left: 920.5px;
+  right: 45.5px;
+  bottom: 541px;
+}
+.Guardar.activoboton {
   position: absolute;
   top: 464px;
   left: 764.5px;
   right: 45.5px;
   bottom: 541px;
+}
+.Guardar.desactivoboton {
+  display: none;
 }
 
 /*--------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 /*-----------Boton que solo aparece cunado se ha presionado el de guardar --------*/
 
-.Nuevo {
+.Nuevo.inactivo{
+  display: none;
+}
+
+.Nuevo.activar {
   position: absolute;
   top: 464px;
   left: 764.5px;
@@ -801,181 +913,55 @@ nav.collapsed .topbar {
   bottom: 541px;
 }
 
+
 body {
     margin: 0%;
     padding: 0%;
     font-family: 'Courier New', Courier, monospace;
     background: linear-gradient(150deg, #CC6600, #1255A9 ) ;
-    height: 100vh;
+    height: 100%;
 
 
 }
 
-.recordar{
-  margin: -5px 0 20px 5px;
-  color: blue;
-  cursor: pointer;
+.grid-item:first-child {
+  margin-left: 0;
 }
-
-input[type="submit"]{
-  width: 50%;
-  height: 50px;
-  border: 1px solid;
-  background: #4990ce;
-  border-radius: 25px;
-  font-size: 18px;
-  color: azure;
-  cursor: pointer;
-  outline: none;
-
-}.formulario {
+.VentanaDenunciasdescripcion.active .contenedorDescripcioDirecciones {
+  width: 95%;
+  left: 7px;
   position: absolute;
-  top: 50%;
+  z-index: 3000;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px; 
-  padding: 20px; 
+  height: 25%;
+  border-radius: 15px;
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  background: #F5F5F5;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr); /* Define tres columnas de 100px de ancho cada una */
+  grid-template-rows: 50px 50px; /* Define dos filas de 50px de alto cada una */
+  justify-items: center;
+  align-items:center;
+  grid-column-gap: 10px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+
+
+.VentanaDenunciasdescripcion.active .contenderTextoDescripcion {
+  width: 95%;
+  left: 7px;
+  position: absolute;
+  z-index: 3500;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 25%;
+  border-radius: 15px;
 }
-
-.formulario h1 {
-  text-align: center;
-  font-size: 20px;
-}
-
-.formulario h2 {
-  text-align: center;
-  padding: 0 0 10px 0; 
-  border-bottom: 1px solid silver;
-  font-size: 16px; 
-}
-
-.formulario form {
-  padding: 0 20px; 
-  box-sizing: border-box;
-}
-
-.username input,
-.contraseña input {
-  width: calc(100% - 10px); 
-  padding: 10px 5px; 
-  height: 30px; 
-}
-
-.username label,
-.contraseña label {
-  font-size: 14px; 
-}
-
-.input-group {
-  position: relative;
-  margin-bottom: 20px; 
-}
-
-
-
-form .username{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 30px 0;
-
-}
-
-form .contraseña{
-  position: relative;
-  border-bottom: 2px solid #adadad;
-  margin: 30px 0;
-
-}
-
-.username input{
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
-
-}
-
-.contraseña input {
-  width: 100%;
-  padding: 0 5px;
-  height: 40px;
-  font-size: 16px;
-  border: none;
-  background: none;
-  outline: none;
-}
-
-.username label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #adadad;
-    transform: translateY(-50%);
-    font-size: 16px;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.contraseña label {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  color: #adadad;
-  transform: translateY(-50%);
-  font-size: 16px;
-  pointer-events: none;
-  transition: .5s;
-}
-
-.username span{
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 100%;
-    width: 100%;
-    height: 2px;
-    background: #6c3483;
-    transition: .5s;
-}
-
-.contraseña span {
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 100%;
-  width: 100%;
-  height: 2px;
-  background: #6c3483;
-  transition: .5s;
-}
-
-.username input:focus ~ label,
-.username input:focus ~ label{
-  top: -5px;
-  color: #6C3483;
-
-}
-
-.username input:focus ~ span::before,
-.username input:focus ~ span::before{
-  width: 100%;
-}
-
-.contraseña input:focus ~ label,
-.contraseña input:focus ~ label {
-    top: -5px;
-    color: #6C3483;
-}
-
-.contraseña input:focus ~ span::before,
-.contraseña input:focus ~ span::before {
-    width: 100%;
-}
-
-
