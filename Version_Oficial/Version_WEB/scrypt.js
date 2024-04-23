@@ -65,8 +65,7 @@ function activarVentanaDenunciasDescripcion() {
   ventanaDenunciasDescripcion.classList.remove("desactive");
     ventanaDenunciasDescripcion.classList.add('active');
     ventanaDenuncias.classList.remove('active');
-    document.querySelector(".texOrientativo.denunciante").classList.remove("desactivo");
-
+    
 }
 
 // Obtener el botón de linkContainer
