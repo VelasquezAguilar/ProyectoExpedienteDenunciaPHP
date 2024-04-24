@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "mani",
+            "request": "launch",
+            "mainClass": "Version_PHP.CodigoJAVA.mani",
+            "projectName": "ProyectoExpedienteDenuncia_13e50fb4"
+        },
+        {
+            "type": "java",
             "name": "Example",
             "request": "launch",
             "mainClass": "com.example.postgresql.Example",

@@ -1,5 +1,6 @@
 <?php
 
+
 $ContendidoDatosInputs = file_get_contents('Entidades.json');
 $Entidaes = json_decode($ContendidoDatosInputs, true);
 $Entidaes[] = $_POST;
