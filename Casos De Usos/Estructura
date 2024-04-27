@@ -1,0 +1,35 @@
+Caso de Uso: Crear Expediente de Denuncia
+->Actores Principales:
+
+Denunciante
+Denunciado
+Ofendido
+
+Breve Descripción:
+Este caso de uso describe el proceso para crear un expediente de denuncia en el sistema.
+
+->Flujo Principal:
+
+Inicio:
+
+El caso de uso comienza cuando el usuario desea registrar una nueva denuncia en el sistema.
+Ingresar Datos de la Denuncia:
+El sistema solicita al usuario que ingrese los datos de la denuncia, como la descripción de los hechos, la fecha, la ubicación, etc.
+Identificar a los Involucrados:
+El usuario identifica al denunciante, denunciado y ofendido asociados con la denuncia.
+
+Crear Expediente:
+
+El sistema crea un expediente para la denuncia con la información proporcionada.
+Confirmación:
+El sistema muestra un mensaje de confirmación al usuario indicando que la denuncia ha sido registrada exitosamente.
+Fin del Caso de Uso:
+
+El caso de uso termina.
+
+->Flujo Alternativo:
+
+Datos Incompletos:
+Si el usuario no proporciona todos los datos requeridos, el sistema muestra un mensaje de error y solicita al usuario que complete la información necesaria.
+Involucrados no Identificados:
+Si el usuario no puede identificar a los involucrados, el sistema permite al usuario omitir esta información, pero registra la denuncia de todos modos.

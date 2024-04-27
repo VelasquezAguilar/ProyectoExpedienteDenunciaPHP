@@ -1,0 +1,46 @@
+Imprimir 
+Expediente 
+ValidarCredencial
+Persona 
+Denunciante 
+Denunciado
+Ofendido
+Denuncia 
+Buscar 
+
+propiedades del objeto expediente :
+- Numero de Expediente (int)
+- Fecha de Creacion (datetime.date)
+- Persona que lo creo (objeto persona)
+- Denunciante (objeto persona)
+  metodos del objeto expediente:
+- agregar_denunciado()
+- quitar_denunciado()
+
+
+propiedades del objeto  persona:
+- Nombre  (str)
+- Apellido (str)
+- Cedula de Identidad (str)
+
+especializacion de la clase perosna para denunciado, denunciante  y ofendido
+
+propiedades del objeto ValidarCredencial:
+-usuario  y contraseña (str)
+metodos del objeto ValidarCredencial:
+- metodo validar(self, usuario) -> devuelve True si la cedula es  correcta o False en caso contrario
+
+
+metodos del objeto imprimir :
+-imprimir_expediente(self, exp) -> imprime los datos del expediente
+
+propiedades del objeto denuncia:
+ - tipoDenuncia 
+ - descripcion
+metodos del objeto denuncia:
+agregar_denunciado()
+agregar_denunciante()
+agregar_ofendido()
+
+
+
