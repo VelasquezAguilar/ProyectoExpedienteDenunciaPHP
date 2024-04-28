@@ -125,8 +125,9 @@ contenedores.forEach(contenedor => {
 
 });
 
-///////////////////////////////////////////////////////////////////////////////
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Solo agrega estilos distintos a un boton seleccionado para identificarlo 
 
 //esto es para dar el fecto de  un cambio de boton cuando se posicione sobre el sin necesidad e dar un click
 const CapturarSeleccionarEventosBotones = document.querySelectorAll(".eventosbotones");
@@ -153,7 +154,7 @@ CapturarSeleccionarEventosBotones.forEach(boton => {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+//Cambia los botones si da clik en GUARADR desaparece y aparecera el botn NUEVO y viseversa
 
 //esto es para poder dar click en guradar y sugiera llenar nuevmaente el formulario por medio de otro bonton crear nuevo
 const botonGuardar = document.querySelector(".eventosbotones.Guardar");
@@ -181,50 +182,11 @@ botonNuevo.addEventListener("click", function () {
 });
 
 
-//con esto cambiaremos el texto orientativo en cada ventana al momneto de cambiar los dde opcion de agregar datos de los objetos involicrados
-/*
-const textodeOrientacion = document.querySelector(".contenedorObjetos")
-
-textodeOrientacion.addEventListener("click", function () {
-
-  const Denunciante = document.querySelector(".contenedorObjetos.denunciante");
-  const Denunciado = document.querySelector(".contenedorObjetos.denunciado");
-  const Ofendido = document.querySelector(".contenedorObjetos.ofendido");
-  const Descripcion = document.querySelector(".contenedorObjetos.descripcion");
-  const texto = document.querySelector(".textOrientativo");
-  const texto2 = document.querySelector(".textOrientativo.deunciante");
-  const texto3 = document.querySelector(".textOrientativo.denunciado");
-  const texto4 = document.querySelector(".textOrientativo.ofendido");
-  const texto5 = document.querySelector(".textOrientativo.descripcion");
-
-  if (textodeOrientacion == Denunciante) {
-
-    texto.classList.remove("desactivo");
-    texto.classList.add("desactivo");
-    texto2.classList.remove("desactivo");
-
-  }
-  else if (textodeOrientacion == Denunciado) {
-    texto.classList.remove("desactivo");
-    texto.classList.add("desactivo");
-    texto3.classList.remove("desactivo");
-  }
-  else if (textodeOrientacion == Ofendido) {
-    texto.classList.remove("desactivo");
-    texto.classList.add("desactivo");
-    texto4.classList.remove("desactivo");
-
-  } else if (textodeOrientacion == Descripcion) {
-    texto.classList.remove("desactivo");
-    texto.classList.add("desactivo");
-    texto5.classList.remove("desactivo");
-  }
 
 
-});
-*/
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Cambia un texto orientativo que describe  que papel representa la persona en la denuncia 
 
 document.querySelector(".texOrientativo.denunciante").classList.remove("desactivo");
 
@@ -253,86 +215,7 @@ contenedores.forEach(contenedor => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*
-// Obtener el botón de "Descripción"
-const descripcionBtn = document.querySelector(".contenedorObjetos.descripcion");
-
-// Obtener el contenedor de la ventana de denuncias
-const ventanaDenuncias = document.querySelector(".VentanaDenuncias");
-
-// Función para actualizar la ventana al hacer clic en "Descripción"
-descripcionBtn.addEventListener("click", function() {
-  // Ocultar todos los elementos de texto de orientación
-  const textosOrientativos = document.querySelectorAll(".texOrientativo");
-  textosOrientativos.forEach(texto => {
-      texto.classList.add("desactivo");
-  });
-
-  // Ocultar todos los elementos de la primera sección de direcciones
-  const direccionesAntiguas = document.querySelectorAll(".moldemidel");
-  direccionesAntiguas.forEach(direccion => {
-      direccion.classList.add("desactivo");
-  });
-
-  // Ocultar todos los elementos de texto de descripción
-  const textosDescripcion = document.querySelectorAll(".contenderTextoDescripcion");
-  textosDescripcion.forEach(texto => {
-      texto.classList.add("desactivo");
-  });
-
-  // Mostrar el botón "Crear"
-  const botonCrear = document.querySelector(".eventosbotones.Crear");
-  botonCrear.classList.remove("desactivo");
-
-  // Mostrar el botón "Guardar"
-  const botonGuardar = document.querySelector(".eventosbotones.Guardar");
-  botonGuardar.classList.remove("desactivoboton");
-
-
-
-  ventanaDenuncias.classList.add("active");
-});
-*/
-
-/*la ventana de registro de datos emergente cambiara si se preciona el boton descripcoin ya que pide datos distintos */
-
-// Obtener los elementos de las ventanas
-
-/*
-const ventanaDenuncias = document.querySelector(".VentanaDenuncias");
-const ventanaDenunciasDescripcion = document.querySelector(".VentanaDenunciasdescripcion");
-
-// Función para activar la ventana de denuncias y desactivar la de descripción
-function activarVentanaDenuncias() {
-  ventanaDenuncias.classList.remove('desactive');
-  ventanaDenuncias.classList.add('active');
-  ventanaDenunciasDescripcion.classList.remove('active');
-  ventanaDenunciasDescripcion.classList.remove('desactive');
-  ventanaDenunciasDescripcion.classList.add('desactive');
-  
-}
-
-
-// Función para activar la ventana de descripción y desactivar la de denuncias
-function activarVentanaDenunciasDescripcion() {
-  ventanaDenunciasDescripcion.classList.remove('desactive');
-  ventanaDenunciasDescripcion.classList.add('active');
-  ventanaDenuncias.classList.remove('active');
-}
-
-// Obtener los botones de Denunciante, Denunciado, Ofendido y Descripción
-const botonDenunciante = document.querySelector(".contenedorObjetos.denunciante");
-const botonDenunciado = document.querySelector(".contenedorObjetos.denunciado");
-const botonOfendido = document.querySelector(".contenedorObjetos.ofendido");
-const botonDescripcion = document.querySelector(".contenedorObjetos.descripcion");
-
-// Escuchar eventos click en los botones
-botonDenunciante.addEventListener("click", activarVentanaDenuncias);
-botonDenunciado.addEventListener("click", activarVentanaDenuncias);
-botonOfendido.addEventListener("click", activarVentanaDenuncias);
-botonDescripcion.addEventListener("click", activarVentanaDenunciasDescripcion);
-
-*/
+//Hace o logra validar el id 
 
 function validarID() {
   var id = document.getElementById("ID").value;
@@ -349,62 +232,9 @@ function validarID() {
   }
 }
 
-/*const formulario = document.querySelector(".formulario");
-
-// Manejar el evento submit del formulario
-formulario.addEventListener("submit", function (event) {
-  // Prevenir el envío del formulario por defecto
-  event.preventDefault();
-
-  // Restablecer los valores de los campos de entrada y las opciones seleccionadas
-  const inputs = formulario.querySelectorAll("input");
-  const selects = formulario.querySelectorAll("select");
-
-  inputs.forEach(input => {
-    input.value = ""; // Establecer el valor del input en una cadena vacía
-  });
-
-  selects.forEach(select => {
-    select.selectedIndex = 0; // Establecer el índice seleccionado en el primer elemento (opción predeterminada)
-  });
-});*/
-
-/*
-//Empezamos a gener la logica para enviar los datos capturados en el formulario
-document.getElementById('guardar-btn').addEventListener('click', function() {
-  guardarDatos();
-});
-
-document.getElementById('nuevo-btn').addEventListener('click', function() {
-  limpiarFormulario();
-});
-
-function guardarDatos() {
-  const formulario = document.getElementById('formulario');
-  const formData = new FormData(formulario);
-
-  fetch('main.php', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => {
-    if (response.ok) {
-      console.log('Datos enviados correctamente');
-      limpiarFormulario();
-    } else {
-      console.error('Error al enviar datos');
-    }
-  })
-  .catch(error => {
-    console.error('Error de red:', error);
-  });
-}
-
-function limpiarFormulario() {
-  const formulario = document.getElementById('formulario');
-  formulario.reset();
-}
-*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Parete que obtiene los datos del formulario en los inputs del HTML 
 
 // Obtener referencia al formulario
 const formulario = document.getElementById("formulario");
