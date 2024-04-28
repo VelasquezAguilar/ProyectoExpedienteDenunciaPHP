@@ -7,6 +7,7 @@ class expediente{
     private $ListaDenunciados;
     private $ListaOfendidos;
     private $NumExpediente;
+    private $objDelito;
 
 
 // Para los objetos denunciante, denunciado y ofendido se implementa concepto de
@@ -19,10 +20,13 @@ class expediente{
         $this->ListaDenunciados = $ListaDenunciados;
         $this->ListaOfendidos = $ListaOfendidos;
         $this->NumExpediente = $NumExpediente;
-        $objDelito = new Delito($departamento, $municipio, $colonia, $numeroBloque, $calle, $TipoDelito, $Descripcion);
+        $this->objDelito = new Delito($departamento, $municipio, $colonia, $numeroBloque, $calle, $TipoDelito, $Descripcion);
     }
 
    //metodo para acceder a los objetos 
+   public function getobjDelito(){
+     return $this->objDelito;
+   }
     public function getListaDenunciantes(){
         return $this->ListaDenunciantes;
     }

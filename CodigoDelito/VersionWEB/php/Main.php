@@ -5,6 +5,7 @@ include_once ("Denunciante.php");
 include_once ("Denunciado.php");
 include_once ("Ofendido.php");
 include_once ("Expediente.php");
+include_once ("conexionPosgres.php");
 class Main
 {
 
@@ -22,7 +23,7 @@ class Main
     // Verificar si se han enviado datos desde el formulario
     $ListaDenunciantes = new ArrayObject();
 
-
+/*
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // Capturar los datos del formulario
       $identidad = $_POST["ID"];
@@ -59,9 +60,9 @@ class Main
 
       // Agregar el nuevo denunciante a la lista de denunciantes
       $ListaDenunciantes->append($nuevoDenunciante);
+*/
 
-
-      /* $ListaDenunciantes = new ArrayObject();
+      /* $ListaDenunciantes = new ArrayObject();*/
 
       $ListaDenunciantes->append(
         new Denunciante(
@@ -79,7 +80,7 @@ class Main
           "0311200200504",
           "Masculino"
         )
-      );*/
+      );
 
       // instancia de objeto denunciado en posiciones de un arreglo
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -176,9 +177,45 @@ class Main
       echo "    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\n";
       //echo $objexpediente->getListaDenunciantes()->toString() . "\n";
 
+     /* 
+      $conexion = new conexionPosgres();
+      $conexion->queryInsert(
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getIdentidad(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getPrimerNombre(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getSegundoNombre(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getPrimerApellido(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getSegundoApellido(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getEdad(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getGenero(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getobjDireccion()->getDepartamento(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getobjDireccion()->getMunicipio(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getobjDireccion()->getColonia(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getobjDireccion()->getNumeroBloque(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getobjDireccion()->getNumeroCasa(),
+          $objexpediente->getListaDenunciantes()->offsetGet(0)->getobjDireccion()->getCodigoPostal()
+      );
+      
+      
+*/
+echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getIdentidad();
+echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getPrimerNombre();
+echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getSegundoNombre();
+echo$objexpediente->getListaDenunciantes()->offsetGet(0)->getPrimerApellido();
+echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getSegundoApellido();
+echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getEdad();
+echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getGenero();
+
+
+
+echo $objexpediente->getListaDenunciantes()->offsetGet(1)->getobjDireccion()->getDepartamento();
+
+
+
+
+
     }
   }
-}
+
 //para ejecutar (RUN ) el main
 Main::main();
 

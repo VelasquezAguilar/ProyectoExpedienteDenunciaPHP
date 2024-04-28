@@ -37,7 +37,9 @@ class Persona extends Direccion
      $direction = $direccion->$
     }*/
 
-
+public function getobjDireccion(){
+   $this->objDireccion;
+}
 
    //getters 
    public function getPrimerNombre()
@@ -78,32 +80,32 @@ class Persona extends Direccion
    }
    public function setPrimerApellido($PrimerApellido)
    {
-      $this->$PrimerApellido = $PrimerApellido;
+      $this->PrimerApellido = $PrimerApellido;
       return $this;
    }
    public function setSegundoNombre($SegundoNombre)
    {
-      $this->$SegundoNombre = $SegundoNombre;
+      $this->SegundoNombre = $SegundoNombre;
       return $this;
    }
    public function setSegundoApellido($SegundoApellido)
    {
-      $this->$SegundoApellido = $SegundoApellido;
+      $this->SegundoApellido = $SegundoApellido;
       return $this;
    }
    public function setEdad($edad)
    {
-      $this->$edad = $edad;
+      $this->edad = $edad;
       return $this;
    }
    public function setGenero($Genero)
    {
-      $this->$Genero = $Genero;
+      $this->Genero = $Genero;
       return $this;
    }
    public function setIdentidad($identidad)
    {
-      $this->$identidad = $identidad;
+      $this->identidad = $identidad;
    }
 
    public function toString() {

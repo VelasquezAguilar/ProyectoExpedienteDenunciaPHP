@@ -452,3 +452,37 @@ function limpiarFormulario() {
   formulario.reset();
 }
 */
+
+// Obtener referencia al formulario
+const formulario = document.getElementById("formulario");
+
+// Escuchar el evento submit del formulario
+formulario.addEventListener("submit", function(event) {
+    // Prevenir el comportamiento por defecto del formulario (recargar la página)
+    event.preventDefault();
+
+    // Obtener los datos del formulario
+    const formData = new FormData(formulario);
+
+    // Realizar la solicitud AJAX para enviar los datos al servidor
+    fetch("../php/Main.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        // Manejar la respuesta del servidor
+        if (response.ok) {
+            return response.text(); // Si la respuesta es satisfactoria, retornar el texto de la respuesta
+        } else {
+            throw new Error("Error en la solicitud AJAX"); // Si hay un error en la solicitud, lanzar un error
+        }
+    })
+    .then(data => {
+        // Manejar los datos de la respuesta del servidor
+        console.log(data); // Aquí puedes hacer lo que desees con la respuesta del servidor
+    })
+    .catch(error => {
+        // Manejar los errores
+        console.error("Error:", error);
+    });
+});
