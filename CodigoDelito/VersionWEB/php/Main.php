@@ -23,7 +23,7 @@ class Main
     // Verificar si se han enviado datos desde el formulario
     $ListaDenunciantes = new ArrayObject();
 
-/*
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // Capturar los datos del formulario
       $identidad = $_POST["ID"];
@@ -60,10 +60,10 @@ class Main
 
       // Agregar el nuevo denunciante a la lista de denunciantes
       $ListaDenunciantes->append($nuevoDenunciante);
-*/
+
 
       /* $ListaDenunciantes = new ArrayObject();*/
-
+/*
       $ListaDenunciantes->append(
         new Denunciante(
           "Comayagua",
@@ -81,7 +81,7 @@ class Main
           "Masculino"
         )
       );
-
+*/
       // instancia de objeto denunciado en posiciones de un arreglo
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       $ListaDenunciados = new ArrayObject();
@@ -167,17 +167,17 @@ class Main
       //echo $objexpediente->getListaDenunciados()->offsetGet(1)->toString() . "\n";
       //echo $objexpediente->(getListaDenunciados()->(offsetGet(0)->toString())) . "\n";
       //$selecObjetoDenunciado = $objexpediente->getListaDenunciados();
-      //$selecObjetoDenunciado = $ListaDenunciados;
-      // $objDenucniadoSelec = $selecObjetoDenunciado[1];
+    //$selecObjetoDenunciado = $ListaDenunciados;
+       //$objDenucniadoSelec = $selecObjetoDenunciado[1];
       //echo $ListaDenunciados->count();
-      //echo "Hola el objeto seleccionado es: ".$objDenucniadoSelec->toString() . "\n";
+     // echo "Hola el objeto seleccionado es: ".$objDenucniadoSelec->toString() . "\n";
       //echo $objexpediente->getListaDenunciados()->offsetGet(1)->toString() . "\n";
       // echo $objexpediente->getListaDenunciantes()->offsetGet(0)->toString() . "\n";
 
       echo "    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\n";
       //echo $objexpediente->getListaDenunciantes()->toString() . "\n";
 
-     /* 
+     
       $conexion = new conexionPosgres();
       $conexion->queryInsert(
           $objexpediente->getListaDenunciantes()->offsetGet(0)->getIdentidad(),
@@ -196,18 +196,6 @@ class Main
       );
       
       
-*/
-echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getIdentidad();
-echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getPrimerNombre();
-echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getSegundoNombre();
-echo$objexpediente->getListaDenunciantes()->offsetGet(0)->getPrimerApellido();
-echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getSegundoApellido();
-echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getEdad();
-echo $objexpediente->getListaDenunciantes()->offsetGet(0)->getGenero();
-
-
-
-echo $objexpediente->getListaDenunciantes()->offsetGet(1)->getobjDireccion()->getDepartamento();
 
 
 
@@ -215,7 +203,7 @@ echo $objexpediente->getListaDenunciantes()->offsetGet(1)->getobjDireccion()->ge
 
     }
   }
-
+}
 //para ejecutar (RUN ) el main
 Main::main();
 

@@ -40,7 +40,8 @@ searchInput.addEventListener("focus", (e) => {
   document.body.classList.remove("collapsed");
 });
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //TENGASE CLARO QUE DE AQUI EN ADELANTE CUANDO NOS REFERIMOS o MENCIONAMOS LOS OBJETOS SON a las entidades de:
@@ -110,40 +111,6 @@ botonDescripcion.addEventListener("click", function () {
 
 
 //FUncionalidad para que se pueda navegar el nav con el botn siguiente 
-
-
-
-
-
-/*var botonIniciar = document.querySelector(".nexhtml");
-  botonIniciar.addEventListener("click", function() {
-    
-    if (botonIniciar) {
-        botonIniciar.addEventListener("click", function() {
-            
-            window.location.href = "desplega.htm"; // Cambiar la ubicación a otro.html
-        });
-    }
-});*/
-
-
-//funcion que permita seleccionar objetos para cambiar disposciones de entradas de datos por medio de la ventana emergente
-
-/*const  seleccionarobj = document.querySelector(".contenedorObjetos");
-
-seleccionarobj.addEventListener("click", function() {
-
-  seleccionarobj.classList.add('active');
-  if(seleccionarobj.classList.contains("activo")){
-    seleccionarobj.classList.remove("activo");
-  }else{
-    seleccionarobj.classList.add("activo");
-  }
-
-
-});*/
-
-
 //intenetar que se cambie los estliso de los tipod de objetos para la denuncia 
 
 
@@ -158,22 +125,7 @@ contenedores.forEach(contenedor => {
 
 });
 
-/*const CapturarSeleccion = document.querySelectorAll('.contenedorObjetos div');
-
-CapturarSeleccion.forEach((elem) => {
-  elem.addEventListener("click", function () {
-    const defectoObjetoSeleccionado = document.querySelector('.contenedorObjetos.active');
-
-    CapturarSeleccion.forEach((link) => {
-      if (link.class == defectoObjetoSeleccionado) {
-        link.classList.remove("active");
-      } else {
-        link.classList.add("active");
-      }
-    });
-  });
-});*/
-
+///////////////////////////////////////////////////////////////////////////////
 
 
 //esto es para dar el fecto de  un cambio de boton cuando se posicione sobre el sin necesidad e dar un click
@@ -199,7 +151,8 @@ CapturarSeleccionarEventosBotones.forEach(boton => {
 
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //esto es para poder dar click en guradar y sugiera llenar nuevmaente el formulario por medio de otro bonton crear nuevo

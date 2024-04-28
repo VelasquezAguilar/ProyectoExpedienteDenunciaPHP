@@ -49,6 +49,8 @@ class conexionPosgres{
         }
     }
 }
+
+
 /*
 $conexion = new conexionPosgres();
 $datosFormulario = new entradadatosAvariables();

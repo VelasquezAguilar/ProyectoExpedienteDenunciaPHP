@@ -38,7 +38,7 @@ class Persona extends Direccion
     }*/
 
 public function getobjDireccion(){
-   $this->objDireccion;
+  return $this->objDireccion;
 }
 
    //getters 
