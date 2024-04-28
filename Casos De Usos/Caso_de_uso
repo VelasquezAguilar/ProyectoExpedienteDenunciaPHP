@@ -1,0 +1,19 @@
+Casos de Uso: 
+
+Actor: Ingresa al inicio del sistema, ingresa el usuario y contraseña.
+Programa: acepta la información y cambia de ventana.
+Programa: Aparece la ventana de inicio de la pagina
+Programa: Le mostrara al lado izquierdo el menú con las opciones (Expediente, Nuevo Expediente, Eliminados , Actualizados, Denuncias, Users).
+Actor: selecciona da click en Nuevo expediente
+Programa: Le mostrara la ventana con los formularos con los campos para ingresar los datos de cada uno los formularios
+Actor: llena formulario y da clic en guardar.
+Programa: guarda los datos y sugiere por medio de un boton agregar un nuevo denunciante, denunciado, ofendido, segun sea el caso.
+    Actor: si Selecciona nuevo.
+    Programa: mostrara el mismo formulario para rellenar su campos.
+    Actor: Si selecciona siguiente.
+    Programa: muestra un nuevo formulario para agregar al siguiente personaje de la denucnia, en el caso de estar en denunciante
+              se mostrara el formulario de denunciado.
+Programa: Se muestra el siguiente formulario.
+Actor: llena cada uno de los formulario y le da clic en finalizar.
+Programa:El sistema guarda la información y sugiere un nuevo expediente a crear.
+Programa:   envia la información a la Base de Datos.
